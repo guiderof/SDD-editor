@@ -3,15 +3,16 @@
 
 <head>
     <title>Editor</title>
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css"></link>
+    <link rel="stylesheet" type="text/css" href="js/libs/bootstrap/bootstrap.css"></link>
     <link rel="stylesheet" type="text/css" href="public/css/index.css"></link>
-    <script type="text/javascript" charset="utf-8" src="node_modules/requirejs/require.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="js/libs/requirejs/require.js"></script>
     <script type="text/javascript" charset="utf-8">
         require.config({
             baseUrl: window.location.protocol + "//" + window.location.host +
                      window.location.pathname.split("/").slice(0, -1).join("/"),
             paths: {
-                angular: './node_modules/angular/angular',
+                angular: './js/libs/angular/angular',
                 ace: './js/libs/ace-master/lib/ace'
             },
             shim: {
