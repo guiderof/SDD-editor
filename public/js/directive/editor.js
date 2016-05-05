@@ -5,14 +5,16 @@ define([
     var moduleName = 'Editor';
     angular
         .module(moduleName, [])
-        .directive('editorPannel', function () {
+        .directive('editorPannel', function ($rootScope) {
             return {
                 restrict: 'E',
-                template: '<div id="editor">',
+                templateUrl: 'html/editor.html',
                 link: function (scope, elem, attrs) {
                     var editor = ace.edit("editor");
 					editor.setTheme("ace/theme/monokai");
 					editor.getSession().setMode("ace/mode/python");
+
+					//scope.initCode = $rootScope.question.initial_code;
                 }
             };
         });

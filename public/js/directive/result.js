@@ -11,9 +11,9 @@ define([
                 scope: {
 
                 },
-                controller: function ($scope, $http) {
+                controller: function ($rootScope, $scope, $http) {
                     $scope.point = 0;
-
+					//$rootScope.params.question_id
                     $scope.submit = function () {
 
                     };
