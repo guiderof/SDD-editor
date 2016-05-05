@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Editor</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css"></link>
+    <link rel="stylesheet" type="text/css" href="public/css/index.css"></link>
+    <script type="text/javascript" charset="utf-8" src="node_modules/requirejs/require.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        require.config({
+            baseUrl: window.location.protocol + "//" + window.location.host +
+                     window.location.pathname.split("/").slice(0, -1).join("/"),
+            paths: {
+                angular: './node_modules/angular/angular',
+                ace: './node_modules/ace-master/lib/ace'
+            },
+            shim: {
+                angular: {
+                    exports: 'angular'
+                }
+            },
+            deps: ['js/app']
+        })
+    </script>
+</head>
+<body>
+    <section ng-controller="DashBoardCtrl">
+        <div class="col-md-12 dashboard">
+            <question-pannel class="fullHeight"
+                            ng-class="{'col-md-5': expand, 'col-md-4': !expand}">
+            </question-pannel>
+            <div class="fullHeight nopadding"
+                ng-class="{'col-md-7': expand, 'col-md-8': !expand}">
+                <editor-pannel class="col-md-12 editor"></editor-pannel>
+                <result-pannel class="col-md-12 result"></result-pannel>
+            </div>
+            <!--div class="col-md-12 comment">
+                <comment-pannel></comment-pannel>
+            </div-->
+        </div>
+    </section>
+</body>
+
+</html>
