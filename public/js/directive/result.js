@@ -7,7 +7,7 @@ define([
         .directive('resultPannel', function () {
             return {
                 restrict: 'E',
-                templateUrl: 'public/html/result.html',
+                templateUrl: 'html/result.html',
                 scope: {
 
                 },

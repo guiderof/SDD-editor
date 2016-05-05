@@ -2,9 +2,9 @@ require([
     'angular'
 ], function (angular) {
     require([
-        'public/js/controller/dashboard',
-        'public/js/directive/editor',
-        'public/js/directive/result'
+        'js/controller/dashboard',
+        'js/directive/editor',
+        'js/directive/result'
     ], function (dashboardCtrl, Editor, Result) {
         angular
             .module('sddProject', [Editor, Result])
