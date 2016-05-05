@@ -26,6 +26,11 @@ module.exports = function (grunt) {
                         dest: 'public/js/libs/require'
                     }, {
                         expand: true,
+                        cwd: 'resource/ace-master/lib/ace/',
+                        src: ['**'],
+                        dest: 'public/js/libs/ace'
+                    }, {
+                        expand: true,
                         cwd: 'node_modules/angular-ui-bootstrap/dist/',
                         src: ['ui-bootstrap-csp.css'],
                         dest: 'public/css/libs/angular-ui-bootstrap'
