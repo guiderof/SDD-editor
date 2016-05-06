@@ -1,4 +1,15 @@
 <div class="question fullHeight">
-    <p class="question__title">{{title}}</p>
-    <span class="question__question">{{question}}</span>
+    <h2 class="question__title">{{question.question_name}}</h2>
+    <b class="question__language">
+        <span>Language:</span>
+        <span class="text-primary">{{question.language}}</span>
+    </b>
+    <hr>
+    <p class="question__question">{{question.guideline}}</p>
+    <hr>
+
+    <b>Example:</b>
+    <br>
+    <textarea class="question__example" rows="10" cols="50">{{question.example}}</textarea>
+
 </div>

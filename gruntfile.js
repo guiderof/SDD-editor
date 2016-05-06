@@ -17,7 +17,12 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'node_modules/angular/',
-                        src: ['angular.min.js'],
+                        src: ['angular.js'],
+                        dest: 'public/js/libs/angular'
+                    }, {
+                        expand: true,
+                        cwd: 'node_modules/angular-sanitize/',
+                        src: ['angular-sanitize.js'],
                         dest: 'public/js/libs/angular'
                     }, {
                         expand: true,
@@ -37,7 +42,7 @@ module.exports = function (grunt) {
                     }, {
                         expand: true,
                         cwd: 'node_modules/bootstrap/dist/css/',
-                        src: ['bootstrap.min.css'],
+                        src: ['bootstrap.css'],
                         dest: 'public/css/libs/bootstrap'
                     }
                 ]
