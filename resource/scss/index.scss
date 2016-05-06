@@ -30,6 +30,13 @@ section {
     height: 30%;
 }
 
+.question {
+
+    &__example {
+        padding: 10px;
+    }
+}
+
 #editor {
     position: absolute;
     top: 0;

@@ -10,11 +10,15 @@ define([
                 restrict: 'E',
                 templateUrl: 'html/editor.html',
                 link: function (scope, elem, attrs) {
-                    var editor = ace.edit("editor");
+					var editor = ace.edit("editor");
 					editor.setTheme("ace/theme/monokai");
 					editor.getSession().setMode("ace/mode/python");
 
-					//scope.initCode = $rootScope.question.initial_code;
+					$rootScope.$on('question_value', function (value) {
+						if (value) {
+							editor.setValue($rootScope.question.initial_code, 1);
+						}
+					});
                 }
             };
         });

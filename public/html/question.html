@@ -1,15 +1,21 @@
 <div class="question fullHeight">
-    <h2 class="question__title">{{question.question_name}}</h2>
-    <b class="question__language">
+    <div>
+        <h2 class="question__title">{{question.question_name}}</h2>
+    </div>
+    <div>
+        <b class="question__language">
         <span>Language:</span>
         <span class="text-primary">{{question.language}}</span>
     </b>
-    <hr>
-    <p class="question__question">{{question.guideline}}</p>
-    <hr>
-
-    <b>Example:</b>
-    <br>
-    <textarea class="question__example" rows="10" cols="50">{{question.example}}</textarea>
+    </div>
+    <div class="question__question">
+        <hr>
+        <p>{{question.guideline}}</p>
+        <hr>
+    </div>
+    <div class="question__example">
+        <b>Example:</b>
+    </div>
+    <textarea class="form-control" rows="10" cols="50">{{question.example}}</textarea>
 
 </div>
