@@ -7,6 +7,7 @@ define([
             $rootScope.assignment = {};
 
             $scope.expand = true;
+            $scope.student_id = '';
 
             var absUrl = $location.absUrl();
             if (absUrl.indexOf('?') > 0) {
@@ -34,6 +35,7 @@ define([
                         }
                     }).success(function (data, status, headers, config) {
                         console.log('assignment:', data);
+                        $scope.student_id = data.student_id;
                         $rootScope.question = data.question;
                         $rootScope.assignment = data.assignment;
                         $rootScope.$broadcast('question_value', true);

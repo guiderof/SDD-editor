@@ -26,10 +26,24 @@
 <body>
     <section ng-controller="DashBoardCtrl">
         <div class="col-md-12 dashboard">
-            <question-pannel class="fullHeight"
+            <div class="col-md-12 topbar">
+                <div class="col-md-5 fullHeight head-logo">
+                </div>
+                <div class="col-md-4 fullHeight">
+                </div>
+                <div class="col-md-3 fullHeight profile-detail">
+                    <div class="fullHeight profile-id">
+                        <p>{{student_id}}</p>
+                    </div>
+                    <div class="fullHeight profile-image">
+                        <img src="./img/profile-image.jpg">
+                    </div>
+                </div>
+            </div>
+            <question-pannel class=""
                             ng-class="{'col-md-5': expand, 'col-md-4': !expand}">
             </question-pannel>
-            <div class="fullHeight nopadding"
+            <div class="nopadding"
                 ng-class="{'col-md-7': expand, 'col-md-8': !expand}">
                 <editor-pannel class="col-md-12 editor"></editor-pannel>
                 <result-pannel class="col-md-12 result"></result-pannel>
