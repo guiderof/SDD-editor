@@ -26,7 +26,7 @@ define([
 							};
 							$scope.result = data.results?1:2;
 							*/
-							var path = "http://172.20.10.11:8090/api/question/compile";
+							var path = "http://localhost:8090/api/question/compile";
 							$http({
 		                        method: 'POST',
 		                        url: path,
@@ -64,7 +64,7 @@ define([
 							console.log(point, testcast);
 							$scope.point = parseInt(point*10/testcast);
 							*/
-							var path = "http://172.20.10.11:8090/api/question/test";
+							var path = "http://localhost:8090/api/question/test";
 							$http({
 		                        method: 'POST',
 		                        url: path,
