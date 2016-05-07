@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "sdd term project",
   "main": "index.html",
-  "scripts": {
-    "preinstall": "./configure",
-    "postinstall": "grunt"
-  },
+  "scripts": {},
   "author": "Preecha Nakngern <guiderof@gmail.com>",
   "license": "MIT",
   "dependencies": {
