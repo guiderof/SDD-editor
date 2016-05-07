@@ -5,6 +5,7 @@ define([
         function ($rootScope, $scope, $location, $http) {
             $rootScope.question = {};
             $rootScope.assignment = {};
+            $rootScope.script = "";
 
             $scope.expand = true;
             $scope.student_id = '';

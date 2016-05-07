@@ -34,7 +34,7 @@ define([
 		                            "Content-type": "application/json;charset=UTF-8"
 		                        },
 								data: JSON.stringify({
-									script: "print 'hello, world'",
+									script: $rootScope.script,
 									api: $scope.assignment_id,
 									qid: $scope.question_id
 								})
@@ -72,7 +72,7 @@ define([
 		                            "Content-type": "application/json;charset=UTF-8"
 		                        },
 								data: JSON.stringify({
-									script: "",
+									script: $rootScope.script,
 									aid: $scope.assignment_id,
 									qid: $scope.question_id
 								})
