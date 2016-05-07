@@ -41,7 +41,7 @@ define([
 
 					$scope.run = function () {
 						if ($scope.assignment_id && $scope.question_id) {
-							var path = "base" + "api/question/test" + $scope.assignment_id +'-' + $scope.question_id;
+							var path = "http://localhost:8090/api/question/test";
 							$http({
 		                        method: 'POST',
 		                        url: path,
@@ -49,7 +49,9 @@ define([
 		                            "Content-type": "application/json;charset=UTF-8"
 		                        },
 								data: JSON.stringify({
-									script: "script"
+									script: "",
+									aid: $scope.assignment_id,
+									qid: $scope.question_id
 								})
 		                    }).success(function (data, status, headers, config) {
 		                        console.log('result:', data);
