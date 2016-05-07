@@ -79,8 +79,8 @@ define([
 		                    }).success(function (data, status, headers, config) {
 		                        console.log('result:', data);
 								var point = 0;
-								var testcast = data.tested.length;
-								data.tested.forEach(function (item) {
+								var testcast = data.tested.result.length;
+								data.tested.result.forEach(function (item) {
 									if (item)
 										point++;
 								});
