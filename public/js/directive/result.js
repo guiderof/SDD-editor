@@ -40,7 +40,7 @@ define([
 								})
 		                    }).success(function (data, status, headers, config) {
 		                        console.log('result:', data);
-								$scope.result = data.results?1:2;
+								$scope.result = data.compiled.results?1:2;
 		                    }).error(function (data, status, headers, config) {
 		                        console.log('get question error');
 		                    });
