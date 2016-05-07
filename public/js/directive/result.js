@@ -26,7 +26,7 @@ define([
 							};
 							$scope.result = data.results?1:2;
 							*/
-							var path = "http://172.20.10.11:8090/api/test/compile";
+							var path = "http://172.20.10.11:8090/api/question/compile";
 							$http({
 		                        method: 'POST',
 		                        url: path,
