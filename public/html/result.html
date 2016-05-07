@@ -1,6 +1,6 @@
 <div class="col-md-12 result__bar">
     <div class="result__point col-md-8">
-        <b>POINT : {{point}}</b>
+        <b>POINT : {{point}}/{{total || 10}}</b>
     </div>
     <div class="result__submit col-md-2">
         <button ng-click="run()" class="btn btn-primary">RUN</button>
@@ -10,7 +10,14 @@
     </div>
 </div>
 <div class="col-md-12 result__result">
-    <div>
-        {{result}}
+    <div ng-if="result == 1">
+        <h1>
+            <span class="label label-success">success!</span>
+        </h1>
+    </div>
+    <div ng-if="result == 2">
+        <h1>
+            <span class="label label-danger">fail!</span>
+        </h1>
     </div>
 </div>
