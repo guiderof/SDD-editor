@@ -23,8 +23,7 @@ define([
 						var valid = new Date($scope.assignment.deadline) > Date.now();
 						if ($scope.remain > 0 && valid) {
 							$scope.remain--;
-							$scope.remain_text = parseInt($scope.remain/60) + " : " +
-								$scope.remain % 60 ? $scope.remain % 60 : '00';
+							$scope.remain_text = parseInt($scope.remain/60) + " : " + $scope.remain % 60;
 						} else {
 							$rootScope.canSubmit = false;
 							$scope.remain_text = "TIME OUT";
