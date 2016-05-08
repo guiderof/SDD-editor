@@ -23,7 +23,7 @@ section {
 }
 
 .topbar {
-    height: 50px;
+    height: 60px;
     border-bottom: 1px solid #ccc;
 }
 
@@ -40,14 +40,15 @@ section {
 
 .profile-id {
     display: inline-block;
-    width: 200px;
+    width: 400px;
+    padding-right: 50px;
 }
 
 .profile-image {
     width: 50px;
     text-align: center;
     display: inline-block;
-    position: relative;;
+    position: absolute;
     right: 0;
     img {
         max-width: 80%;
