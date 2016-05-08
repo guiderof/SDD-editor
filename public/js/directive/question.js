@@ -12,11 +12,27 @@ define([
                 scope: {
 
                 },
-                controller: function ($rootScope, $scope) {
+                controller: function ($rootScope, $scope, $interval) {
 					$scope.question = {};
+					$scope.assignment = {};
+					$scope.remain = 0;
+					$scope.remain_text = '';
+					$rootScope.canSubmit = true;
+					$interval(function () {
+						console.log($scope.remain, $scope.remain_text);
+						if ($scope.remain > 0) {
+							$scope.remain--;
+							$scope.remain_text = parseInt($scope.remain/60) + " : " + $scope.remain%60;
+						} else {
+							$rootScope.canSubmit = false;
+							$scope.remain_text = "TIME OUT";
+						}
+					}, 1000);
 					$rootScope.$on('question_value', function (value) {
 						if (value) {
 							$scope.question = $rootScope.question;
+							$scope.assignment = $rootScope.assignment;
+							$scope.remain = $scope.assignment.time_limit * 60;
 						}
 					});
                 }

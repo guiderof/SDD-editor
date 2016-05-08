@@ -17,15 +17,14 @@ define([
 					$scope.result = false;
 					$scope.question_id = "";
 					$scope.assignment_id = "";
+					$scope.canSubmit = $rootScope.canSubmit;
+
+					$rootScope.$watch('canSubmit', function (val) {
+						$scope.canSubmit = val;
+					});
 					//$rootScope.params.question_id
                     $scope.run = function () {
 						if ($scope.assignment_id && $scope.question_id) {
-							/*
-							var data = {
-								results: true
-							};
-							$scope.result = data.results?1:2;
-							*/
 							var path = "http://localhost:8090/api/question/compile";
 							$http({
 		                        method: 'POST',

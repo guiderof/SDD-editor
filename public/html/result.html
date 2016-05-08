@@ -3,10 +3,10 @@
         <b>POINT : {{point}}/{{total || 10}}</b>
     </div>
     <div class="result__submit col-md-2">
-        <button ng-click="run()" class="btn btn-primary">RUN</button>
+        <button ng-click="run()" ng-if="canSubmit" class="btn btn-primary">RUN</button>
     </div>
     <div class="result__submit col-md-2">
-        <button ng-click="submit()" class="btn btn-danger">SUBMIT</button>
+        <button ng-click="submit()" ng-if="canSubmit" class="btn btn-danger">SUBMIT</button>
     </div>
 </div>
 <div class="col-md-12 result__result">
